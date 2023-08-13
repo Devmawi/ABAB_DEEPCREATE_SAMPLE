@@ -1,0 +1,38 @@
+managed;
+//implementation in class zbp_hello_order_entity unique;
+
+define behavior for ZHELLO_ORDER_ENTITY //alias <alias_name>
+persistent table zhello_order
+lock master
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  association _ORDER_ITEMS { create; }
+
+  field (numbering : managed, readonly) OrderId;
+
+  mapping for zhello_order {
+    OrderId = order_id;
+    Text = text;
+  }
+}
+
+define behavior for ZHELLO_ORDERITEM_ENTITY  alias OrderItem
+persistent table zhello_orderitem
+lock dependent by _Order
+{
+   association _Order;
+   delete;
+   update;
+
+   field (numbering : managed, readonly) OrderItemId;
+   field (readonly) OrderId;
+
+   mapping for zhello_orderitem {
+    OrderItemId = order_item_id;
+    OrderId = order_id;
+    Text = text;
+   }
+}

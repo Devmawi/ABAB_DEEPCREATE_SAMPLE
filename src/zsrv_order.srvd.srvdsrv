@@ -1,0 +1,5 @@
+@EndUserText.label: 'Bestellung'
+define service ZSRV_ORDER {
+  expose ZHELLO_ORDER_ENTITY;
+  expose ZHELLO_ORDERITEM_ENTITY;
+}
