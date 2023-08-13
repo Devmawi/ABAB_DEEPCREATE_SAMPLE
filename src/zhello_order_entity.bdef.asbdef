@@ -1,5 +1,10 @@
-managed;
+
+
+
+managed implementation in class ZHELLO_ORDER_ACTIONS unique;
 //implementation in class zbp_hello_order_entity unique;
+
+
 
 define behavior for ZHELLO_ORDER_ENTITY //alias <alias_name>
 persistent table zhello_order
@@ -10,6 +15,8 @@ lock master
   update;
   delete;
   association _ORDER_ITEMS { create; }
+  action CancelOrder deep parameter ZHELLO_PARAM;
+
 
   field (numbering : managed, readonly) OrderId;
 
@@ -19,6 +26,8 @@ lock master
   }
 }
 
+
+
 define behavior for ZHELLO_ORDERITEM_ENTITY  alias OrderItem
 persistent table zhello_orderitem
 lock dependent by _Order
@@ -26,6 +35,7 @@ lock dependent by _Order
    association _Order;
    delete;
    update;
+
 
    field (numbering : managed, readonly) OrderItemId;
    field (readonly) OrderId;

@@ -1,0 +1,5 @@
+CLASS zhello_order_actions DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zhello_order_entity.
+ENDCLASS.
+
+CLASS zhello_order_actions IMPLEMENTATION.
+ENDCLASS.

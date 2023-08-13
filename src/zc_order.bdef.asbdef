@@ -8,6 +8,7 @@ define behavior for ZC_ORDER //alias <alias_name>
   use delete;
 
   use association _ORDER_ITEMS { create; }
+
 }
 
 define behavior for ZC_ORDER_ITEMS //alias <alias_name>

@@ -1,0 +1,26 @@
+abstract;
+strict ( 1 );
+with hierarchy;
+
+define behavior for ZHELLO_PARAM //alias <alias_name>
+{
+    deep mapping for ZHELLO_PARAM
+      {
+
+        message = message;
+      }
+
+    association childs ;
+}
+
+
+define behavior for ZHELLO_PARAM_ROW
+{
+
+  deep mapping for ZHELLO_PARAM_ROW corresponding
+  {
+    message = message;
+  }
+
+  association parent ;
+}
