@@ -9,7 +9,16 @@ ENDCLASS.
 CLASS lhc_ZHELLO_ORDER_ENTITY IMPLEMENTATION.
 
   METHOD CancelOrder.
+    DATA(lt_keys) = keys.
 
+
+    LOOP AT lt_keys INTO DATA(item).
+       DATA i TYPE zhello_param_row.
+       LOOP AT item-%param-childs INTO DATA(row).
+            i-message = row-message.
+       ENDLOOP.
+
+    ENDLOOP.
 
   ENDMETHOD.
 
