@@ -6,10 +6,11 @@ deep creation. As a demo scenario we are using orders and order items.
 ## Important files
 
 * [CDS Interface Vieww for Order](src/zhello_order_entity.ddls.asddls) and [CDS Interface Views for Order Items](src/zhello_orderitem_entity.ddls.asddls)
+    * [Abstract entity for param](src/zhello_param.ddls.asddls)
+    * [Abstract entity for param row](src/zhello_param_row.ddls.asddls)
 * [(optional) CDS Projection View for Order](src/zc_order.ddls.asddls) and [(optional) CDS Projection View for Order Items](src/zc_order_items.ddls.asddls)
 * [Behavior Definition](src/zhello_order_entity.bdef.asbdef) or [Projection Behaviour Definition](src/zc_order.bdef.asbdef)
-    * [Behavior Definition for action param](src/zhello_param.ddls.asddls)
-    * [Behavior Definition for action param item](src/zhello_param_row.ddls.asddls)
+    * [Behavior Definition for action param](src/zhello_param.bdef.asbdef)
 * [Service Definition](src/zsrv_order.srvd.srvdsrv)
 
 ## Used tools and services
